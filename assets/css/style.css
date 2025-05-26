@@ -1,0 +1,72 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif; /* Make sure body font is readable */
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Space between logo and links */
+    align-items: center; /* Vertically align items */
+    padding: 20px 40px;
+    background-color: hsl(0, 0%, 25%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar .logo a {
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar-links {
+    list-style-type: none;
+    display: flex;
+    gap: 20px; /* Space between nav links */
+}
+
+.navbar-links li {
+    display: inline;
+}
+
+.navbar-links a:hover {
+    background-color: hsl(0, 0%, 10%);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+    
+    .navbar-links {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .navbar-links li {
+        width: 100%;
+    }
+}
